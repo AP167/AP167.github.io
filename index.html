@@ -11,46 +11,70 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Raleway:wght@700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+    <script src="app.js"></script>
 
 </head>
 
 <body>
-    
+
     <header>
         <div class="background">
             <img src="purple_scenery2.png" alt="" width="100%">
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Technical Skills</a></li>
-                <li><a href="#competitive-programming">Achievements</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#about" data-tooltip="About">About</a></li>
+                <li><a href="#skills" data-tooltip="Technical Skills">Technical Skills</a></li>
+                <li><a href="#competitive-programming" data-tooltip="Achievements">Achievements</a></li>
+                <li><a href="#projects" data-tooltip="Projects">Projects</a></li>
+                <li><a href="#contact" data-tooltip="Contact Me">Contact Me</a></li>
             </ul>
         </nav>
     </header>
+
+
+
+    <!-- NOTE : if clip-path is not supported and the menu doesn't disappear
+     even on clicking the hamburger, scroll to the top to get rid of it -->
+    <div class="floating-navbar">
+        <ul class="floating-nav-links">
+            <li><a href="#about" data-tooltip="About">About</a></li>
+            <li><a href="#skills" data-tooltip="Technical Skills">Technical Skills</a></li>
+            <li><a href="#competitive-programming" data-tooltip="Achievements">Achievements</a></li>
+            <li><a href="#projects" data-tooltip="Projects">Projects</a></li>
+            <li><a href="#contact" data-tooltip="Contact Me">Contact Me</a></li>
+        </ul>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+
     <section>
         <div class="intro-box">
-        <div class="introduction">
-            <h1>Anoushka Patra</h1>
-            <p>First year student</p>
-            <p>B.Tech in Information Technology</p>
-            <p>Indian Institute of Engineering Science and Technology, Shibpur</p>
+            <div class="introduction">
+                <h1>Anoushka Patra</h1>
+                <p>First year student</p>
+                <p>B.Tech in Information Technology</p>
+                <p>Indian Institute of Engineering Science and Technology, Shibpur</p>
+            </div>
         </div>
-    </div>
     </section>
     <section>
         <div id="about">
             <p>
-                Hi! Thanks for visiting my page. 
+                Hi! Thanks for visiting my page.
             </p>
             <p>
-                I am an enthusiastic girl who enjoys learning new things. 
+                I am an enthusiastic girl who enjoys learning new things.
                 I am currently focusing on learning app development.
-                Other than programming, I am interested in designing. 
+                Other than programming, I am interested in designing.
                 (Fun-fact : All the images in this page are designed by me, including the cover-image above!)
             </p>
         </div>
@@ -61,10 +85,10 @@
             <div class="circle5"></div>
             <div class="circle6"></div>
             <img src="pattern2.png" alt="">
-            <div class="circle7"></div>
+            <!-- <div class="circle7"></div>
             <div class="circle8"></div>
             <div class="circle9"></div>
-            <div class="circle10"></div>
+            <div class="circle10"></div> -->
             <h2>Technical Skills</h2>
             <div class="skill-type">
                 <h3>Programming Languages</h3>
@@ -267,7 +291,11 @@
             <div class="circle2"></div>
             <div class="circle3"></div>
             <div class="glass">
-                <h2><p>Competitive</p><p>Programming</p><p>Achievements</p></h2>
+                <h2>
+                    <p>Competitive</p>
+                    <p>Programming</p>
+                    <p>Achievements</p>
+                </h2>
                 <div class="contest">
                     <h3>Google Code Jam 2021</h3>
                     <div>Rank in Qualification Round : 5633</div>
@@ -290,16 +318,68 @@
                     <h3>3 star in Codechef</h3>
                 </div>
             </div>
-            <div class="coding-profile"></div>
+            <div class="coding-profile">
+                <div id="menu" class="menu">
+                    <p id="menu-title">Coding Profile</p>
+                    <div id="handle1" class="handle"><p>CodeChef</p></div>
+                    <div id="handle2" class="handle"><p>Codeforces</p></div>
+                    <div id="handle3" class="handle"><p>LeetCode</p></div>
+                    <div id="handle4" class="handle"><p>AtCoder</p></div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="projects"></section>
+    <img src="laptop-image.png" alt="" width="50%">
+    <section id="projects">
+        <div class="project-box">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <div class="project-description">
+                    <h3>BMI Calculator</h3>
+                    <p>A flutter app to calculate Body Mass Index. (This project is a part of Angela Yu's flutter course)</p>
+                </div>
+                <div class="project-image" id="projectImage1">
+                    <img src="project-image1.png" alt="" >
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-description">
+                    <h3>Adventure Game</h3>
+                    <p>A choose-your-own-adventure game developed using flutter, where the plot's outcome is determined by the user's choices. 
+                        (This project is a part of Angela Yu's flutter course)
+                    </p>
+                </div>
+                <div class="project-image" id="projectImage2">
+                    <img src="project-image2.png" alt="" >
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-description">
+                    <h3>Flappy-Bird</h3>
+                    <p>A simple flappy-bird flutter game developed without using flutter's game engine. 
+                        I am currently working on it.
+                    </p>
+                </div>
+                <div class="project-image" id="projectImage3">
+                    <img src="project-image3.png" alt="" >
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="footer-bg">
+        <img src="footer-image.png" alt="">
+    </div> -->
     <footer id="contact">
         <div>
-            <!-- TODO: Create a Navbar -->
+            <h2>Connect with Me</h2>
+            <ul class="socialmedia-box">
+                <li><a target="_blank" href="" title="Come back later. I will link my fb account later"><img src="social-media-icons/facebook-icon.svg" alt=""></a></li>
+                <li><a target="_blank" href="" title="Come back later. I will link my twitter account later"><img src="social-media-icons/twitter-icon.svg" alt=""></a></li>
+                <li><a target="_blank" href="" title="Come back later. I will link my linkedin account later"><img src="social-media-icons/linkedin-icon.svg" alt=""></a></li>
+                <li><a target="_blank" href="https://github.com/AP167"><img src="social-media-icons/github-icon.png" alt=""></a></li>
+            </ul>
         </div>
     </footer>
 </body>
-<!-- Format code in VS Code : Shift+Alt+F -->
 
 </html>
