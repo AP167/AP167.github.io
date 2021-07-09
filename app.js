@@ -46,6 +46,7 @@ function menuToggle() {
         handle2.style.display = "block";
         handle3.style.display = "block";
         handle4.style.display = "block";
+        document.getElementById("click-me").style.visibility="hidden";
         // handle1.style.cursor = "pointer";
         // handle1.style.pointerEvents = "all";
 
