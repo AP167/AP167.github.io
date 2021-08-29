@@ -153,7 +153,7 @@ function openFloatingNavbar() {
     // }
     floatingNavbar.style.zIndex = 5;
     floatingNavbar.style.opacity = 1.0;
-    floatingNavbar.style.transition = "all 1.5s ease-out";
+    floatingNavbar.style.transition = "all 1s ease-out";
     floatingNavbar.classList.toggle('open');
 
 }

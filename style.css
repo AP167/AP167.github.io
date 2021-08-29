@@ -104,7 +104,7 @@ nav{
     border-radius: 30px;
     clip-path: circle(0px at right 30px top 30px);
     -webkit-clip-path: circle(0px at right 30px top 30px);
-    transition: all 1.5s ease-out;
+    transition: all 1s ease-out;
     /* transition-property: clip-path not working properly */
     /* this can cause problems if clip-path is not supported
      because it will be visible even without clicking the hamburger
